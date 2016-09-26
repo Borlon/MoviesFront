@@ -1,0 +1,105 @@
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <!-- Columna de las fichas -->
+        <div class="col-md-9">
+
+            <h2 class="page-header">
+                Lista de películas ({{listFilms.length}}}})
+            </h2>
+
+            <!-- Ficha -->
+            <div class="well" ng-repeat="film in listFilms">
+                <div class="row">
+                    <div class="pull-right">
+                        <a ui-sref="pruebas"><i class="glyphicon glyphicon-log-out glyphiconGrande"></i></a>
+                    </div>
+                    <div class="pull-left">
+                        <h4>ID: {{film.id}}</h4>
+                        <h4>Título: {{film.title}}</h4>
+                        <h4>Género: {{film.genre}}</h4>
+                    </div>
+                </div>
+
+
+                <hr>
+                <div class="row">
+                    <!-- Espacio para los botones de acción de la ficha -->
+                    <div class="hidden btnsFichas">
+                        <a class="btn btn-primary" href="#">Detalles <span
+                                class="glyphicon glyphicon-chevron-right"></span></a>
+                        <a class="btn btn-primary" href="#">Editar <span
+                                class="glyphicon glyphicon-chevron-right"></span></a>
+                        <a class="btn btn-primary" href="#">Borrar <span
+                                class="glyphicon glyphicon-chevron-right"></span></a>
+                    </div>
+                    <div class="centered btnVerMas">
+                        <button class="btn btn-default" onclick="verMas()"><i
+                                class="glyphicon glyphicon-option-horizontal"/></button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Pager -->
+            <ul class="pager">
+                <li class="previous">
+                    <a href="#">&larr; Anterior</a>
+                </li>
+                <li class="next">
+                    <a href="#">Siguiente &rarr;</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- Blog Sidebar Widgets Column -->
+        <div class="col-md-3 fixedDiv">
+
+            <!-- Buscador -->
+            <div class="well">
+                <h4>Blog Search</h4>
+                <div class="input-group">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+                </div>
+                <!-- /.input-group -->
+            </div>
+
+            <!-- Botón para añadir una nueva ficha -->
+            <div class="well centered">
+                <button class="btn btn-default btn-lg">Añadir nueva película</button>
+
+            </div>
+
+            <!-- Espacio para el filtro -->
+            <div class="well">
+
+
+            </div>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Your Website 2014</p>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+    </footer>
+
+</div>
+<!-- /.container -->
