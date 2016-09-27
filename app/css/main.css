@@ -21,10 +21,25 @@ footer {
     text-align: center;
 }
 
-.btnVerMas{
-    margin-top: 10px;
+.bloque_fichas {
+
 }
 
-.glyphiconGrande {
-    font-size: 30px;
+.ficha{
+  height: 220px;
+  width: 150px;
+  position: relative;
+  display: inline-block;
+  float:left;
+  margin: 8px;
+}
+
+.ficha2 {
+  height: 200px;
+  margin-right: 20px;
+
+}
+
+.paginador {
+  clear: both;
 }

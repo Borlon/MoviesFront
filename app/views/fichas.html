@@ -1,58 +1,35 @@
 <!-- Page Content -->
 <div class="container">
-
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="page-header">
+            Lista de películas ({{listFilms.length}})
+        </h2>
+      </div>
+    </div>
     <div class="row">
 
         <!-- Columna de las fichas -->
-        <div class="col-md-9">
-
-            <h2 class="page-header">
-                Lista de películas ({{listFilms.length}})
-            </h2>
-
-            <!-- Ficha -->
-            <div class="well" ng-repeat="film in listFilms">
-                <div class="row">
-                    <div class="pull-right">
-                        <a ui-sref="pruebas"><i class="glyphicon glyphicon-log-out glyphiconGrande"></i></a>
-                    </div>
-                    <div class="pull-left">
-                        <h4>ID: {{film.id}}</h4>
-                        <h4>Título: {{film.title}}</h4>
-                        <h4>Género: {{film.genre}}</h4>
-                    </div>
-                </div>
-
-
-                <hr/>
-                <div class="row">
-                    <!-- Espacio para los botones de acción de la ficha -->
-                    <div class="hidden btnsFichas">
-                        <a class="btn btn-primary" href="#">Detalles <span
-                                class="glyphicon glyphicon-chevron-right"></span></a>
-                        <a class="btn btn-primary" href="#">Editar <span
-                                class="glyphicon glyphicon-chevron-right"></span></a>
-                        <a class="btn btn-primary" href="#">Borrar <span
-                                class="glyphicon glyphicon-chevron-right"></span></a>
-                    </div>
-                    <div class="centered btnVerMas">
-                        <button class="btn btn-default" onclick="verMas()"><i
-                                class="glyphicon glyphicon-option-horizontal"/></button>
-                    </div>
-                </div>
+        <div class="col-md-9 centered">
+          <div class="well ficha" ng-repeat="film in listFilms">
+            <div>
+                <h4>{{film.title}}</h4>
+                <h5>({{film.releaseDate}})</h5>
+                <h6>{{film.genre}}</h6>
             </div>
-
+          </div>
 
             <!-- Pager -->
-            <ul class="pager">
-                <li class="previous">
-                    <a href="#">&larr; Anterior</a>
-                </li>
-                <li class="next">
-                    <a href="#">Siguiente &rarr;</a>
-                </li>
-            </ul>
-
+            <div class="paginador">
+              <ul class="pager">
+                  <li class="previous">
+                      <a href="#">&larr; Anterior</a>
+                  </li>
+                  <li class="next">
+                      <a href="#">Siguiente &rarr;</a>
+                  </li>
+              </ul>
+            </div>
         </div>
 
         <!-- Blog Sidebar Widgets Column -->
