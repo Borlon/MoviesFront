@@ -9,16 +9,18 @@
     </div>
     <div class="row">
 
-        <!-- Columna de las fichas -->
-        <div class="col-md-9 centered">
-          <div class="well ficha" ng-repeat="film in listFilms">
-            <div>
-                <h4>{{film.title}}</h4>
-                <h5>({{film.releaseDate}})</h5>
-                <h6>{{film.genre}}</h6>
+        <!-- Columna principal -->
+        <div class="col-md-9">
+          <div class="centered columnaFichas">
+            <div class="fichaContainer" ng-repeat="film in listFilms">
+              <a href="#">
+                <div class="ficha">
+                  <img class="img-responsive" src="http://cdn1.pordede.com/content/covers/mediathumb-24787-4.png"/>
+                </div>
+                <span>{{film.title}}</span>
+              </a>
             </div>
           </div>
-
             <!-- Pager -->
             <div class="paginador">
               <ul class="pager">

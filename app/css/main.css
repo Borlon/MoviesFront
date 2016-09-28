@@ -21,25 +21,26 @@ footer {
     text-align: center;
 }
 
-.bloque_fichas {
-
-}
-
-.ficha{
-  height: 220px;
-  width: 150px;
-  position: relative;
-  display: inline-block;
-  float:left;
-  margin: 8px;
-}
-
-.ficha2 {
-  height: 200px;
-  margin-right: 20px;
-
-}
-
 .paginador {
   clear: both;
+  padding-top: 25px;
+}
+
+.fichaContainer {
+    max-height: 258px;
+    padding-bottom: 22px;
+    position: relative;
+    display: inline-block;
+    float: left;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+}
+.fichaContainer a:hover{
+    text-decoration: none;
+}
+.ficha {
+  padding: 8px;
+  width: 150px;
+  height: 220px;
 }
