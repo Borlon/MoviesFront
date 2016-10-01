@@ -12,9 +12,19 @@ angular.module('moviesApp').config(function ($stateProvider, $urlRouterProvider)
     $stateProvider
         .state("home", {
             url: "/home",
+            templateUrl: "views/home.html"
+        })
+        .state("fichas", {
+            url: "/fichas",
             templateUrl: "views/fichas.html",
             controller: "FichasController",
             controllerAs: "FichasCtrl"
+        })
+        .state("createFilm", {
+            url: "/filmCreate",
+            templateUrl: "views/filmCreate.html",
+            controller: "FilmCreateController",
+            controllerAs: "FilmCreateCtrl"
         })
         .state("pruebas", {
 

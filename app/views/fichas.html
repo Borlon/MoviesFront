@@ -1,36 +1,37 @@
 <!-- Page Content -->
 <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <h2 class="page-header">
-            Lista de películas ({{listFilms.length}})
-        </h2>
-      </div>
+        <div class="col-md-12">
+            <h2 class="page-header">
+                Lista de películas ({{listFilms.length}})
+            </h2>
+        </div>
     </div>
     <div class="row">
 
         <!-- Columna principal -->
         <div class="col-md-9">
-          <div class="centered columnaFichas">
-            <div class="fichaContainer" ng-repeat="film in listFilms">
-              <a href="#">
-                <div class="ficha">
-                  <img class="img-responsive" src="http://cdn1.pordede.com/content/covers/mediathumb-24787-4.png"/>
+            <div class="centered columnaFichas">
+                <div class="fichaContainer" ng-repeat="film in listFilms">
+                    <a href="#">
+                        <div class="ficha">
+                            <img class="img-responsive"
+                                 src="http://cdn1.pordede.com/content/covers/mediathumb-24787-4.png"/>
+                        </div>
+                        <span>{{film.title}}</span>
+                    </a>
                 </div>
-                <span>{{film.title}}</span>
-              </a>
             </div>
-          </div>
             <!-- Pager -->
             <div class="paginador">
-              <ul class="pager">
-                  <li class="previous">
-                      <a href="#">&larr; Anterior</a>
-                  </li>
-                  <li class="next">
-                      <a href="#">Siguiente &rarr;</a>
-                  </li>
-              </ul>
+                <ul class="pager">
+                    <li class="previous">
+                        <a href="#">&larr; Anterior</a>
+                    </li>
+                    <li class="next">
+                        <a href="#">Siguiente &rarr;</a>
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -52,11 +53,15 @@
             </div>
 
             <!-- Botón para añadir una nueva ficha -->
+            <!--
             <div class="well centered">
                 <button class="btn btn-default btn-lg">Añadir nueva película</button>
 
             </div>
-
+            -->
+            <div class="well centered">
+                    <a ui-sref="createFilm" class="btn btn-primary">Añadir nueva película</a>
+            </div>
             <!-- Espacio para el filtro -->
             <div class="well">
 

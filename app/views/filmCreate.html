@@ -1,0 +1,29 @@
+<form>
+    <div class="container">
+        <div class="col-md-5">
+            <div class="form-group">
+                <label>Título:</label>
+                <input type="text" class="form-control" id="title" ng-model="film.title">
+            </div>
+            <div class="form-group">
+                <label>Título Original:</label>
+                <input type="text" class="form-control" id="originalTitle" ng-model="film.originalTitle">
+            </div>
+            <div class="form-group">
+                <label>Fecha de estreno:</label>
+                <input type="date" class="form-control" id="releaseDate" ng-model="film.releaseDate">
+            </div>
+            <div class="form-group">
+                <label>Género:</label>
+                <input type="text" class="form-control" id="genre" ng-model="film.genre">
+            </div>
+            <!--<div class="form-group">-->
+                <!--<label>Duración:</label>-->
+                <!--<input type="time" class="form-control" id="duration" ng-model="film.duration">-->
+            <!--</div>-->
+        </div>
+    </div>
+    <div class="well centered col-md-5">
+        <button class="btn btn-default btn-lg" ng-click="submit(film)">Guardar</button>
+    </div>
+</form>
