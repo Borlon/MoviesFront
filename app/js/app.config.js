@@ -26,6 +26,15 @@ angular.module('moviesApp').config(function ($stateProvider, $urlRouterProvider)
             controller: "FilmCreateController",
             controllerAs: "FilmCreateCtrl"
         })
+        .state("filmDetails", {
+            url: "/filmDetails",
+            templateUrl: "views/filmDetails.html",
+            controller: "FilmDetailsController",
+            controllerAs: "FilmDetailsCtrl",
+            params: {
+                filmId: null
+            }
+        })
         .state("pruebas", {
 
             url: "/home/pruebas",

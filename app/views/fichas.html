@@ -13,9 +13,9 @@
         <div class="col-md-9">
             <div class="centered columnaFichas">
                 <div class="fichaContainer" ng-repeat="film in listFilms">
-                    <a href="#">
+                    <a ui-sref="filmDetails({filmId: film.id})">
                         <div class="ficha">
-                            <img class="img-responsive"
+                           <img class="img-responsive"
                                  src="http://cdn1.pordede.com/content/covers/mediathumb-24787-4.png"/>
                         </div>
                         <span>{{film.title}}</span>
